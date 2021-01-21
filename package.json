@@ -1,19 +1,30 @@
 {
   "name": "vue-brick-layout",
+  "files": ["dist"],
+  "main": "./dist/vue-brick-layout.umd.js",
+  "module": "./dist/vue-brick-layout.es.js",
+  "exports": {
+    ".": {
+      "import": "./dist/vue-brick-layout.es.js",
+      "require": "./dist/vue-brick-layout.umd.js"
+    }
+  },
+  "license": "MIT",
   "version": "0.0.0",
   "scripts": {
     "dev": "vite",
-    "build": "vuedx-typecheck . && vite build"
+    "build": "vuedx-typecheck ./lib && vite build"
   },
   "dependencies": {
     "vue": "^3.0.5"
   },
   "devDependencies": {
+    "@types/node": "^14.14.22",
     "@vitejs/plugin-vue": "^1.0.4",
     "@vue/compiler-sfc": "^3.0.5",
     "@vuedx/typecheck": "^0.4.1",
     "@vuedx/typescript-plugin-vue": "^0.4.1",
     "typescript": "^4.1.3",
-    "vite": "^2.0.0-beta.12"
+    "vite": "^2.0.0-beta.35"
   }
 }
