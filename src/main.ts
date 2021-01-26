@@ -1,4 +1,8 @@
 import { createApp } from 'vue'
 import App from './App.vue'
 
-createApp(App).mount('#app')
+import VueBrickLayout from '../lib/main'
+
+const app = createApp(App)
+app.use(VueBrickLayout)
+app.mount('#app')
